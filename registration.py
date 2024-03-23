@@ -1,4 +1,4 @@
-
+user =[]
 
 for users in range(1):   
     userName =input("Enter your username\n")
