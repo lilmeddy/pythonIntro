@@ -31,20 +31,29 @@
 # print(username)
 # print(password)
 
-
+# num =[0,1,2,3,4,5,6,7,8,5,3,2,4,5,6,,8,6,43,354657]
 # generate a list of 1-100 and get all the prime number 
 primeNum=[]
-for num in range(1,101):
-    if num >1 :
-        prime = True
-        for i in range(2,num):
-            if num%i == 0:
-              prime = False
-        if prime:
-           print(num,end=',')
+for i in range(2,101,2):
+   primeNum.append(i)
+print(primeNum)
+# or 
+# for num in range(1,101):
+#     if num >1 :
+#         prime = True
+#         for i in range(2,num):
+#             if num%i == 0:
+#               prime = False
+#         if prime:
+#            print(num,end=',')
          #   primeNum.append(num)
 # print(primeNum)
-
+# or 
+# for i in range(1,20):
+#     if i%2 != 0:
+#         continue
+#     primeNum.append(i)
+# print(primeNum)
 # calculator 
 num1,num2 = int(input("Enter first number ")),int(input("Enter second number "))
 sign = int(input("Enter:\n1 to add\n2 to subtract\n3 to multiply\n4 to find the modulus\n5 to divide\n6 to find exponential\n"))
@@ -62,6 +71,6 @@ elif sign ==6:
    print(num1**num2)
 else:
    print("Math error")
-#    sign = int(input("Enter:\n1 to add\n2 to subtract\n3 to multiply\n4 to find the modulus\n5 to divide\n6 to find exponential\n"))
+   sign = int(input("Enter:\n1 to add\n2 to subtract\n3 to multiply\n4 to find the modulus\n5 to divide\n6 to find exponential\n"))
                
                

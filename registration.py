@@ -33,9 +33,11 @@ else:
     print("invalid password");change = input("forgot password?? Enter yes to change password ")
     if change == "yes":
         i.pop(2)
-        newPassword = input("enter new password\n");i.append(newPassword);print(user)  
-    
+        newPassword = input("enter new password\n");i.append(newPassword)
+        print(f"The currently logged in user is {logged} with the password changed to")
 
+print(user)  
+    
 
 
 # print(user)
