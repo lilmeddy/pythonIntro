@@ -5,7 +5,8 @@ while (len(covert)) != 5:
     print("Omo read what you're to do and don't stress me 5 character idiot");regNum = int(input("enter reg num kid\n")); covert = str(regNum)
 fullreg = input(f"Hello {studentName[:3]}{covert[:3]} press enter to start your exam")
 for questions in cbt:
-    print(questions["question"]);print("_______________________________");print()
+    print(questions["question"])
     for options in questions["option"]:
         print(options)
+    studentAns = input("Enter your answer (a,b,c,d,e)\n");print("_______________________________");print()
 print()
