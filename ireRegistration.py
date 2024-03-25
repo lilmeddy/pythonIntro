@@ -1,6 +1,6 @@
 users =[]
 
-for user in range(5):   
+for user in range(1):   
     user_name =input("Register - Enter your username\n")
     for i in users:
        while i["user_name"] == user_name:
@@ -37,4 +37,28 @@ for user in range(5):
            
         
 print(users)
+
+
+
+#  logged =[]
+# # login 
+# # print(user)
+#     print("Let's login and do some hehehe");username =input("Enter your user name\n")
+#     for i in user:
+#        while i[0] != username:
+#             print("Invalid username");username = input("Enter your user name\n")
+#     passWord= input("Enter your password\n")
+#     while passWord == i[2]:
+#          logged.append([userName,password]) 
+#          print(f"The currently logged in user is {logged}")
+#     else:
+#         print("invalid password");change = input("forgot password?? Enter yes to change password ")
+#         if change == "yes":
+#             i.pop(2)
+#             newPassword = input("enter new password");i.append(newPassword) ;print(user)  
+    
+
+
+# # print(user)
+
 

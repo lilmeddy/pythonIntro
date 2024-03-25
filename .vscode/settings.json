@@ -1,0 +1,5 @@
+{
+    "pythonIndent.keepHangingBracketOnLine": false,
+    "pythonIndent.trimLinesWithOnlyWhitespace": false,
+    "pythonIndent.useTabOnHangingIndent": false
+}
