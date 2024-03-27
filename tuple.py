@@ -16,18 +16,25 @@ first = []
 middle =[]
 last = []
 for i in range(2):
-    firstName = input("Enter your first name (compulsory)\n")
-    while firstName == "":
-        firstName = input("You don't have sense can't you see compulsory \nEnter your first name mumu\n")
-    first.append(firstName)
-    print(first)
-    middleName = input("Enter your middle name (optional)\n")
-    if middleName == "":
-        middleName = "NIL"
+    firstName = input("Enter your first name (compulsory)\n").capitalize()
+    new = False
+    while new == False:
+        for i in firstName.split(" "):
+            if i != "":
+                new = i
+        for i in range(9):
+            if new ==False and new : 
+                firstName = input("You don't have sense after saying compulsory you are typing rubbish\n Enter your firstname mumu\n ")
+        
+    print(new)
+    first.append(new)
+    middleName = input("Enter your middle name (optional)\n").capitalize()
     middle.append(middleName)
-    print(middle)
-    lastName = input("Enter your last name (compulsory)\n")
+    lastName = input("Enter your last name (compulsory)\n").capitalize()
+    stress = False
     while lastName == "":
-        lastName = input("You don't have sense can't you see compulsory \nEnter your last name mumu\n")
-    last.append(lastName)
-    print(last)
+        lastName = input("You don't have sense can't you see compulsory \nEnter your last name mumu\n").capitalize()
+    last.append(lastName) 
+print(first);print(middle);print(last)
+# student records
+# 1. duro duro duro
