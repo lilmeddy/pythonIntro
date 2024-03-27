@@ -9,7 +9,7 @@
 # print(f"Hi {firstName.capitalize()} {lastName.capitalize()}.\nYour Account balance is ${accountBalance}\nYour Account Number is {accountNumber}")
 # print(f'''Hi {firstName.capitalize()} {lastName.capitalize()}.
 # Your Account balance is ${accountBalance}
-# Your Account Number is {accountNumber}''')
+# Your Account N2umber is {accountNumber}''')
 
 # Assignment ask student about their scores in science, math and english exam
 # Ask for their name, print admission number and find the mean score and write your average score is
