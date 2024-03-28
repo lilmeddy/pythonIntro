@@ -22,19 +22,21 @@ for i in range(2):
         for i in firstName.split(" "):
             if i != "":
                 new = i
-        for i in range(9):
-            if new ==False and new : 
-                firstName = input("You don't have sense after saying compulsory you are typing rubbish\n Enter your firstname mumu\n ")
-        
-    print(new)
+        if new ==False: 
+            firstName = input("You don't have sense after saying compulsory you are typing rubbish\n Enter your firstname mumu\n ")
     first.append(new)
     middleName = input("Enter your middle name (optional)\n").capitalize()
     middle.append(middleName)
     lastName = input("Enter your last name (compulsory)\n").capitalize()
     stress = False
-    while lastName == "":
-        lastName = input("You don't have sense can't you see compulsory \nEnter your last name mumu\n").capitalize()
-    last.append(lastName) 
+    while stress == False:
+        for i in lastName.split(" "):
+            if i != "":
+                new = i
+        if stress ==False: 
+           lastName = input("You don't have sense can't you see compulsory \nEnter your last name mumu\n").capitalize()
+    last.append(stress) 
+
 print(first);print(middle);print(last)
 # student records
 # 1. duro duro duro
