@@ -33,12 +33,12 @@ for i in range(2):
                lastName = input("You don't have sense can't you see compulsory \nEnter your last name mumu\n").capitalize()
         last.append(stress) 
         starts = ["9","8","7"];sec = ["0","1"]
-        phoneNumber = input("Enter your phone number\n+234 ")
-        for i in phone:
-            while i == phoneNumber:
-                phoneNumber = input("Phone number taken\nEnter your phone number\n+234 ")
+        phoneNumber = input("Enter your phone number\n+234 ") 
         num = False 
         while num == False:
+            for i in phone:
+                while i == phoneNumber:
+                    phoneNumber = input("Phone number taken\nEnter your phone number\n+234 ")
             for i in phoneNumber.split(" "):
                 if i != "" and i[0] in starts and i[1] in sec and len(i)==10  :
                     num = i
