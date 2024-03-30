@@ -6,11 +6,11 @@ first = []
 middle =[]
 last = []
 accoutBalance=[]
-fixedBalance = 500000
+fixedBalance = 50000
 phone = []
 user =[]
 for i in range(2):
-    fixedBalance +=fixedBalance
+    fixedBalance +=50000
     accoutBalance.append(fixedBalance)
     firstName = input("Enter your first name (compulsory)\n").capitalize()
     new = False
