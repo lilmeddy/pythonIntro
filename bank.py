@@ -19,7 +19,7 @@ for i in range(2):
             if i != "":
                 new = i
         if new == False: 
-            firstName = input("You don't have sense after saying compulsory you are typing rubbish\n Enter your firstname mumu\n ")
+            firstName = input("You don't have sense after saying compulsory you are typing rubbish\nEnter your firstname mumu\n ")
     first.append(new)
     middleName = input("Enter your middle name (optional)\n").capitalize()
     middle.append(middleName)
@@ -41,12 +41,12 @@ for i in range(2):
     num = False 
     while num == False:
         for i in phoneNumber.split(" "):
-            if i[0] in starts and i[1] in sec and len(i)==10 and i != "":
+            if i != "" and i[0] in starts and i[1] in sec and len(i)==10  :
                 num = i
             if num == False:
                 phoneNumber = input("All nigerians phone number +234 (and should start with 9,8 or 7 and the second value should be 0 or 1) and 10 digits\nEnter your phone number \n+234 ")
     phone.append(num)
       
   
-user.extend([first,last,accoutBalance,phone])
+user.extend([first,middle,last,accoutBalance,phone])
 print(user)
