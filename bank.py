@@ -53,8 +53,6 @@ for i in range(2):
     for i in user:
         indexPhone = phone.index(accountNum);username = i[indexPhone];hehe.append(username)
     print(hehe)
-        
-           
-    
+
       
   
