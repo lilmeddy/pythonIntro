@@ -10,6 +10,7 @@ fixedBalance = 50000
 phone = []
 username = []
 user =[]
+hehe =[]
 
 for i in range(2):
     inp = input("Hi dear thanks for choosing lilmeddy bank\nBanking with us for the first time?\nEnter 1 to register\nAlready have an account?\nEnter 2 to login\nEnter either 1 or 2 entering any other thing would terminate your program and you'll have to start again ")
@@ -50,8 +51,10 @@ for i in range(2):
     print("Registration successful now let's set your login details you'll pick a username for yourself and we have some suggested user name if needed and you'll also set your password and we can suggest for you also")
     accountNum =input("Enter your accountNumber (Your account number is your phone number )\n")
     for i in user:
-        indexPhone = phone.index(accountNum);username = i[indexPhone]
-        print(f"Hiii {username}")
+        indexPhone = phone.index(accountNum)
+        username = i[indexPhone]
+        hehe.append(username)
+    print(hehe)
         
            
     
