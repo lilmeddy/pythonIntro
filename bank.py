@@ -46,12 +46,14 @@ for i in range(2):
                 if num == False:
                     phoneNumber = input("All nigerians phone number +234 (and should start with 9,8 or 7 and the second value should be 0 or 1) and 10 digits\nEnter your phone number \n+234 ")
         phone.append(num)
-        print("Registration successful now let's set your login details you'll pick a username for yourself and we have some suggested user name if needed and you'll also set your password and we can suggest for you also")
-        accountNum =input("Enter your accountNumber (Your account number is your phone number )\n")
-        # for i in user:
-            
+    user.extend([first,middle,last,accoutBalance,phone])
+    print("Registration successful now let's set your login details you'll pick a username for yourself and we have some suggested user name if needed and you'll also set your password and we can suggest for you also")
+    accountNum =input("Enter your accountNumber (Your account number is your phone number )\n")
+    for i in user:
+        indexPhone = phone.index(accountNum);username = i[indexPhone]
+        print(f"Hiii {username}")
+        
            
     
       
   
-user.extend([first,middle,last,accoutBalance,phone]);print(user)
