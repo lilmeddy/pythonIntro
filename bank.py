@@ -51,9 +51,7 @@ for i in range(2):
     print("Registration successful now let's set your login details you'll pick a username for yourself and we have some suggested user name if needed and you'll also set your password and we can suggest for you also")
     accountNum =input("Enter your accountNumber (Your account number is your phone number )\n")
     for i in user:
-        indexPhone = phone.index(accountNum)
-        username = i[indexPhone]
-        hehe.append(username)
+        indexPhone = phone.index(accountNum);username = i[indexPhone];hehe.append(username)
     print(hehe)
         
            
