@@ -65,3 +65,5 @@ for i in range(2):
             passWord = input("Enter your password\n")
             while i[0] != passWord:
                 passWord = input("Wrong password\n Your phone number is your password and acccount number Enter your password\n")
+            print(f"Welcome {username} thanks for banking with us\nWhat will you like to do?\nEnter 1 to check your balance 2 to withdraw and 3 to transfer 4 to buy airtime")
+            
