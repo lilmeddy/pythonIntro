@@ -51,10 +51,17 @@ for i in range(2):
         if accountNum in phone:
             indexPhone = phone.index(accountNum);suggested= first[indexPhone][:4] + last[indexPhone][:3].lower() + phone[-1][2:9:3]
             amount = accoutBalance[indexPhone]
-            userName = input(f"Enter a password\nSuggested password {suggested}\n")
+            userName = input(f"Enter a username\nSuggested user name{suggested}\n")
+            transactPin = print(f"Dear {userName} your transaction pin is {accountNum[:5]}")
             break
         else:
            accountNum =input("Enter your accountNumber (Your account number is your phone number and password )\n")  
-    login.append([accountNum,userName,amount])
-    if inp == "2": 
-        
+    login.append([accountNum,userName,amount,transactPin])
+    if inp == "2":  
+        for i in login:
+            username =input("Enter your user name\n")
+            while i[2] != username:
+                username = input("Invalid user name\nEnter your user name\n")
+            passWord = input("Enter your password\n")
+            while i[0] != passWord:
+                passWord = input("Wrong password\n Your phone number is your password and acccount number Enter your password\n")
