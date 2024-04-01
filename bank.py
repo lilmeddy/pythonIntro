@@ -24,18 +24,15 @@ for i in range(2):
                 firstName = input("You don't have sense after saying compulsory you are typing rubbish\nEnter your firstname mumu\n ")
         first.append(new)
         middleName = input("Enter your middle name (optional)\n").capitalize();middle.append(middleName)
-        lastName = input("Enter your last name (compulsory)\n").capitalize()
-        stress = False
+        lastName = input("Enter your last name (compulsory)\n").capitalize();stress = False
         while stress == False:
             for i in lastName.split(" "):
                 if i != "":
                     stress = i
             if stress ==False: 
                lastName = input("You don't have sense can't you see compulsory \nEnter your last name mumu\n").capitalize()
-        last.append(stress) 
-        starts = ["9","8","7"];sec = ["0","1"]
-        phoneNumber = input("Enter your phone number\n+234 ") 
-        num = False 
+        last.append(stress);starts = ["9","8","7"];sec = ["0","1"]
+        phoneNumber = input("Enter your phone number\n+234 ");num = False 
         while num == False:
             for i in phone:
                 while i == phoneNumber:
@@ -48,13 +45,13 @@ for i in range(2):
         phone.append(num)
     user.extend([first,middle,last,accoutBalance,phone])
     print("Registration successful now let's set your login details you'll pick a username for yourself and we have some suggested user name if needed and you'll also set your password and we can suggest for you also")
-    accountNum =input("Enter your accountNumber (Your account number is your phone number and username )\n")
+    accountNum =input("Enter your accountNumber (Your account number is your phone number and password )\n")
     found = False
     while found == False:
         if accountNum in phone:
-            indexPhone = phone.index(accountNum)
-            suggested= first[indexPhone][:4] + last[indexPhone][:3].lower() + phone[-1][2:9:3]
-            password = input(f"Enter a password\nSuggested password {suggested}\n")
+            indexPhone = phone.index(accountNum);suggested= first[indexPhone][:4] + last[indexPhone][:3].lower() + phone[-1][2:9:3]
+            userName = input(f"Enter a password\nSuggested password {suggested}\n")
+            
             
         
 
