@@ -11,7 +11,7 @@ phone = []
 username = []
 user =[]
 login =[]
-for i in range(2):
+for i in range(3):
     inp = input("Hi dear thanks for choosing lilmeddy bank\nBanking with us for the first time?\nEnter 1 to register\nAlready have an account?\nEnter 2 to login\nEnter either 1 or 2 entering any other thing would terminate your program and you'll have to start again ")
     if inp == "1" :
         fixedBalance +=50000;accoutBalance.append(fixedBalance);firstName = input("Enter your first name (compulsory)\n").capitalize()
@@ -57,18 +57,66 @@ for i in range(2):
         else:
            accountNum =input("Invalid\nEnter your accountNumber (Your account number is your phone number and password )\n")  
     login.append([accountNum,userName,amount,transactPin])
-    if inp == "2":  
-        for i in login:
-            username =input("Enter your user name\n")
-            while i[1] != username:
-                print(login)
-                username = input("Invalid user name\nEnter your user name\n")
-            passWord = input("Enter your password\n")
-            while i[0] != passWord:
-                passWord = input("Wrong password\nYour phone number is your password and acccount number Enter your password\n")
-            check = input(f"Welcome {username} thanks for banking with us\nWhat will you like to do?\nEnter 1 to check your balance 2 to withdraw and 3 to transfer 4 to buy airtime\n")
-            if check == "1":
-                
+    if inp =="2":
+        maxAttempts = 3
+        attempts = 0
+        while attempts < maxAttempts:
+            username = input("Enter your username: ")
+            password = input("Enter your password (account number): ")
+
+            userFound = False
+            for i in login:
+                if i[1] == username and i[0] == password:
+                    userFound = True
+                    check = input(f"Welcome {username} thanks for banking with us\nWhat will you like to do?\nEnter 1 to check your balance 2 to withdraw and 3 to transfer 4 to buy airtime\n")
+                    if check == "1":
+                      print(f"Your current balance is {i[2]}")
+
+                    elif check == "2":
+                        amount = float(input("Enter the amount to withdraw: "))
+                        if amount <= i[2]:
+                            i[2] -= amount
+                            print(f"Withdrawal successful. Your new balance is {i[2]}")
+                        else:
+                            print("Insufficient balance.")
+
+                    elif check == "3":
+                        receiverPhone = input("Enter the receiver's phone number: ")
+                        amount = float(input("Enter the amount to transfer: "))
+                        if amount <= i[2]:
+                            for receiverInfo in login:
+                                if receiverInfo[0] == receiverPhone:
+                                    receiverInfo[2] += amount
+                                    i[2] -= amount
+                                    print(f"Transfer successful.Your balance is {i[2]}")
+                                    break
+                            else:
+                                print("Receiver not found.")
+                        else:
+                                print(f"Insufficient balance.Your balance is {i[2]}")
+
+                    elif check == "4":
+                        amount = float(input("Enter the amount of airtime to buy: "))
+                        if amount <= i[2]:
+                            i[2] -= amount
+                            print(f"Airtime purchase successful.Your balance is {i[2]}")
+                        else:
+                            print(f"Insufficient balance.Your balance is {i[2]}")
+
+                    elif check == "5":
+                        print("Logging out.")
+                        break  
+
+                    else:
+                        print("Invalid choice.")
+
+                    break 
+            if not userFound:
+                attempts += 1
+                print("Invalid username or password. Please try again.")    
+        else:
+         print("Maximum login attempts reached. Exiting program.")
+   
             
             
             
