@@ -47,23 +47,28 @@ for i in range(2):
     print("Registration successful now let's set your login details you'll pick a username for yourself and we have some suggested user name if needed and you'll also set your password and we can suggest for you also")
     accountNum =input("Enter your accountNumber (Your account number is your phone number and password )\n")
     found = False
-    while found == False:
+    while found == False: 
         if accountNum in phone:
             indexPhone = phone.index(accountNum);suggested= first[indexPhone][:4] + last[indexPhone][:3].lower() + phone[-1][2:9:3]
             amount = accoutBalance[indexPhone]
-            userName = input(f"Enter a username\nSuggested user name{suggested}\n")
+            userName = input(f"Enter a username\nSuggested user name {suggested}\n")
             transactPin = print(f"Dear {userName} your transaction pin is {accountNum[:5]}")
             break
         else:
-           accountNum =input("Enter your accountNumber (Your account number is your phone number and password )\n")  
+           accountNum =input("Invalid\nEnter your accountNumber (Your account number is your phone number and password )\n")  
     login.append([accountNum,userName,amount,transactPin])
     if inp == "2":  
         for i in login:
             username =input("Enter your user name\n")
-            while i[2] != username:
+            while i[1] != username:
+                print(login)
                 username = input("Invalid user name\nEnter your user name\n")
             passWord = input("Enter your password\n")
             while i[0] != passWord:
-                passWord = input("Wrong password\n Your phone number is your password and acccount number Enter your password\n")
-            print(f"Welcome {username} thanks for banking with us\nWhat will you like to do?\nEnter 1 to check your balance 2 to withdraw and 3 to transfer 4 to buy airtime")
+                passWord = input("Wrong password\nYour phone number is your password and acccount number Enter your password\n")
+            check = input(f"Welcome {username} thanks for banking with us\nWhat will you like to do?\nEnter 1 to check your balance 2 to withdraw and 3 to transfer 4 to buy airtime\n")
+            if check == "1":
+                
+            
+            
             
