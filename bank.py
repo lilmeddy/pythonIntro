@@ -51,8 +51,5 @@ for i in range(2):
         if accountNum in phone:
             indexPhone = phone.index(accountNum);suggested= first[indexPhone][:4] + last[indexPhone][:3].lower() + phone[-1][2:9:3]
             userName = input(f"Enter a password\nSuggested password {suggested}\n")
-            
-            
-        
-
+         
  
