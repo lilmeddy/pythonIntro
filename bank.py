@@ -50,9 +50,10 @@ for i in range(2):
     user.extend([first,middle,last,accoutBalance,phone])
     print("Registration successful now let's set your login details you'll pick a username for yourself and we have some suggested user name if needed and you'll also set your password and we can suggest for you also")
     accountNum =input("Enter your accountNumber (Your account number is your phone number )\n")
-    for i in user:
-        indexPhone = phone.index(accountNum);username = i[indexPhone];hehe.append(username)
-    print(hehe)
 
-      
-  
+    if accountNum in phone:
+        indexPhone = phone.index(accountNum)
+        suggested= first[indexPhone][:3] + last[indexPhone] + [-1][2:6:3]
+        user_name = input(f"Enter a username\nSuggested username {suggested}")
+    print(hehe)
+ 
