@@ -116,7 +116,7 @@ for i in range(3):
                             i[2] -= amount
                             transactionPin = input("Enter your transaction pin: ")
                             if transactionPin == i[3]:
-                                print(f"Airtime purchase successful.Your balance new is {i[2]}")
+                                print(f"Airtime purchase to the phone number in this account 0{i[0]} successful.Your balance new is {i[2]}")
                             else:
                                  print("Incorrect transaction pin. Airtime purchase cancelled.")
                         else:
