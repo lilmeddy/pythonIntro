@@ -52,6 +52,10 @@ for i in range(3):
             indexPhone = phone.index(accountNum);suggested= first[indexPhone][:4] + last[indexPhone][:3].lower() + phone[-1][2:9:3]
             amount = accoutBalance[indexPhone]
             userName = input(f"Enter a username\nSuggested user name {suggested}\n")
+            for i in login:
+                while i[1] == userName:
+                        print("UserName taken")
+                        userName= input("Enter your user name\n")
             transactPin = print(f"Dear {userName} your transaction pin is {accountNum[:5]}")
             break
         else:
@@ -76,7 +80,12 @@ for i in range(3):
                         amount = float(input("Enter the amount to withdraw: "))
                         if amount <= i[2]:
                             i[2] -= amount
-                            print(f"Withdrawal successful. Your new balance is {i[2]}")
+                            transactionPin = input("Enter your transaction pin: ")
+                            if transactionPin == i[3]:
+                                i[2] -= amount
+                                print(f"Withdrawal successful. Your new balance is {i[2]}")
+                            else:
+                               print("Incorrect transaction pin. Withdrawal cancelled.")
                         else:
                             print("Insufficient balance.")
 
@@ -84,14 +93,19 @@ for i in range(3):
                         receiverPhone = input("Enter the receiver's phone number: ")
                         amount = float(input("Enter the amount to transfer: "))
                         if amount <= i[2]:
-                            for receiverInfo in login:
-                                if receiverInfo[0] == receiverPhone:
-                                    receiverInfo[2] += amount
-                                    i[2] -= amount
-                                    print(f"Transfer successful.Your balance is {i[2]}")
-                                    break
+                            transactionPin = input("Enter your transaction pin: ")
+                            if transactionPin == i[3]:
+                                for receiverInfo in login:
+                                    if receiverInfo[0] == receiverPhone:
+                                        receiverInfo[2] += amount
+                                        print(f"You are about to send {amount} to {receiverInfo[1]}")
+                                        i[2] -= amount
+                                        print(f"Transfer successful.Your balance is {i[2]}")
+                                        break
+                                else:
+                                    print("Receiver not found.")
                             else:
-                                print("Receiver not found.")
+                                 print("Incorrect transaction pin. Transfer cancelled.")
                         else:
                                 print(f"Insufficient balance.Your balance is {i[2]}")
 
@@ -99,7 +113,11 @@ for i in range(3):
                         amount = float(input("Enter the amount of airtime to buy: "))
                         if amount <= i[2]:
                             i[2] -= amount
-                            print(f"Airtime purchase successful.Your balance is {i[2]}")
+                            transactionPin = input("Enter your transaction pin: ")
+                            if transactionPin == i[3]:
+                                print(f"Airtime purchase successful.Your balance is {i[2]}")
+                            else:
+                                 print("Incorrect transaction pin. Airtime purchase cancelled.")
                         else:
                             print(f"Insufficient balance.Your balance is {i[2]}")
 
