@@ -43,24 +43,25 @@ for i in range(3):
                 if num == False:
                     phoneNumber = input("All nigerians phone number +234 (and should start with 9,8 or 7 and the second value should be 0 or 1) and 10 digits\nEnter your phone number \n+234 ")
         phone.append(num)
-    user.extend([first,middle,last,accoutBalance,phone])
-    print("Registration successful now let's set your login details you'll pick a username for yourself and we have some suggested user name if needed and you'll also set your password and we can suggest for you also")
-    accountNum =input("Enter your accountNumber (Your account number is your phone number and password )\n")
-    found = False
-    while found == False: 
-        if accountNum in phone:
-            indexPhone = phone.index(accountNum);suggested= first[indexPhone][:4] + last[indexPhone][:3].lower() + phone[-1][2:9:3]
-            amount = accoutBalance[indexPhone]
-            userName = input(f"Enter a username\nSuggested user name {suggested}\n")
-            for i in login:
-                while i[1] == userName:
-                        print("UserName taken")
-                        userName= input("Enter your user name\n")
-            transactPin = print(f"Dear {userName} your transaction pin is {accountNum[:5]}")
-            break
-        else:
-           accountNum =input("Invalid\nEnter your accountNumber (Your account number is your phone number and password )\n")  
-    login.append([accountNum,userName,amount,transactPin])
+        user.extend([first,middle,last,accoutBalance,phone])
+        print("Registration successful now let's set your login details you'll pick a username for yourself and we have some suggested user name if needed and you'll also set your password and we can suggest for you also")
+        accountNum =input("Enter your accountNumber (Your account number is your phone number and password )\n")
+        found = False
+        while found == False: 
+            if accountNum in phone:
+                indexPhone = phone.index(accountNum);suggested= first[indexPhone][:4] + last[indexPhone][:3].lower() + phone[-1][2:9:3]
+                amount = accoutBalance[indexPhone]
+                userName = input(f"Enter a username\nSuggested user name {suggested}\n")
+                for i in login:
+                    while i[1] == userName:
+                            print("UserName taken")
+                            userName= input("Enter your user name\n")
+                transactPin = accountNum[:5]
+                print(f"Dear {userName} your transaction pin is {transactPin}")
+                break
+            else:
+              accountNum =input("Invalid\nEnter your accountNumber (Your account number is your phone number and password )\n")  
+        login.append([accountNum,userName,amount,transactPin])
     if inp =="2":
         maxAttempts = 3
         attempts = 0
@@ -72,7 +73,7 @@ for i in range(3):
             for i in login:
                 if i[1] == username and i[0] == password:
                     userFound = True
-                    check = input(f"Welcome {username} thanks for banking with us\nWhat will you like to do?\nEnter 1 to check your balance 2 to withdraw and 3 to transfer 4 to buy airtime\n")
+                    check = input(f"Welcome {username} thanks for banking with us\nWhat will you like to do?\nEnter 1 to check your balance 2 to withdraw and 3 to transfer 4 to buy airtime 5 to log out\n")
                     if check == "1":
                       print(f"Your current balance is {i[2]}")
 
@@ -87,7 +88,7 @@ for i in range(3):
                             else:
                                print("Incorrect transaction pin. Withdrawal cancelled.")
                         else:
-                            print("Insufficient balance.")
+                            print(f"Insufficient balance. ¥our balance is {i[2]}")
 
                     elif check == "3":
                         receiverPhone = input("Enter the receiver's phone number: ")
@@ -115,7 +116,7 @@ for i in range(3):
                             i[2] -= amount
                             transactionPin = input("Enter your transaction pin: ")
                             if transactionPin == i[3]:
-                                print(f"Airtime purchase successful.Your balance is {i[2]}")
+                                print(f"Airtime purchase successful.Your balance new is {i[2]}")
                             else:
                                  print("Incorrect transaction pin. Airtime purchase cancelled.")
                         else:
