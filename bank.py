@@ -74,10 +74,22 @@ for i in range(3):
             for i in login:
                 if i[1] == username and i[0] == password:
                     userFound = True
-                    check = input(f"Welcome {username} thanks for banking with us\nWhat will you like to do?\nEnter 1 to check your balance 2 to withdraw and 3 to transfer 4 to buy airtime 5 to log out\n")
+                    check = input(f"Welcome {username} thanks for banking with us\nWhat will you like to do?\nEnter 0 to deposit\nEnter 1 to check your balance 2 to withdraw and 3 to transfer 4 to buy airtime 5 to log out\n")
                     if check == "1":
                       print(f"Your current balance is {i[2]}")
-
+                    elif check == "0":
+                        amt = input("Enter the amount to deposit: ")
+                        amount = float(amount)
+                        if amount <= i[2]:
+                            i[2] += amount
+                            transactionPin = input("Enter your transaction pin: ")
+                            if transactionPin == i[3]:
+                                i[2] += amount
+                                print(f"Deposit successful. Your new balance is {i[2]}")
+                            else:
+                               print("Incorrect transaction pin. Withdrawal cancelled.")
+                        else:
+                            print(f"Insufficient balance. ¥our balance is {i[2]}")
                     elif check == "2":
                         amt = input("Enter the amount to withdraw: ")
                         amount = float(amount)
