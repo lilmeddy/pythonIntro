@@ -79,7 +79,8 @@ for i in range(3):
                       print(f"Your current balance is {i[2]}")
 
                     elif check == "2":
-                        amount = float(input("Enter the amount to withdraw: "))
+                        amt = input("Enter the amount to withdraw: ")
+                        amount = float(amount)
                         if amount <= i[2]:
                             i[2] -= amount
                             transactionPin = input("Enter your transaction pin: ")
@@ -136,7 +137,3 @@ for i in range(3):
                 print("Invalid username or password. Please try again.")    
         else:
          print("Maximum login attempts reached. Exiting program.")
-   
-            
-            
-            
