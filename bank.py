@@ -52,6 +52,7 @@ for i in range(3):
                 indexPhone = phone.index(accountNum);suggested= first[indexPhone][:4] + last[indexPhone][:3].lower() + phone[-1][2:9:3]
                 amount = accoutBalance[indexPhone]
                 userName = input(f"Enter a username\nSuggested user name {suggested}\n")
+                
                 for i in login:
                     while i[1] == userName:
                             print("UserName taken")
