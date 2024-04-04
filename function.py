@@ -37,4 +37,18 @@ def factorial(num):
     for i in range(1,num+1):
          res *= i 
     return res
-print(factorial(4))
+# print(factorial(4))
+def names(*name):
+    for i in name:
+        print(f"The name of my class mates are {i}")
+names("medie","timi")
+def names(*name):
+    return name
+# print(names("medie","timi"))
+def python(syntax,dataType):
+    if syntax == "for":
+        print("This is a python conditional statement")
+    if dataType == "string":
+        print("This is a string")
+
+python(dataType="sting",syntax="for")
