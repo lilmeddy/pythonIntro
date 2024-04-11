@@ -116,7 +116,7 @@ def home(phoneNumber):
         if loggedUser == "":
             while True:
                 opt = input("")
-        print(f"\nWelcome back {loggedUser["firstname"].capitalize()}\n${loggedUser["balance"]}")
+        print(f"\nWelcome back {loggedUser["firstname"].capitalize()}\nYour balance is${loggedUser["balance"]}")
         print("Enter 1 to transfer\nEnter 2 to deposit\nEnter 3 to withdraw\nEnter 4 to logout")
         ans = input("")
         if ans in ["1", "2", "3", "4"]:
