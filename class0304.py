@@ -132,7 +132,7 @@ def home(phoneNumber):
                 startpage()
         else:
             print("Invalid input")
-
+   
 def transfer(loggeduser):
     for i in users:
         if i["phonenumber"] == loggeduser["phonenumber"]:
@@ -164,6 +164,24 @@ def transfer(loggeduser):
     
     acct["balance"] += bal
     loggeduser -= bal
+    home(loggeduser["phonenumber"])
+def deposit(loggeduser):
+    for i in users:
+        if i["phonenumber"] == loggeduser["phonenumber"]:
+            continue
+    print(i["phonenumber"])
+    acct = int(input("Enter the amount you want to deposit: "))
+    loggeduser["balance"] += acct
+    print(f"Deposit successful your balance is {loggeduser["balance"]}")
+    home(loggeduser["phonenumber"])
+def withdraw(loggeduser):
+    for i in users:
+        if i["phonenumber"] == loggeduser["phonenumber"]:
+            continue
+    print(i["phonenumber"])
+    acct = int(input("Enter the amount you want to deposit: "))
+    loggeduser["balance"] -= acct
+    print(f"Deposit successful your balance is {loggeduser["balance"]}")
     home(loggeduser["phonenumber"])
     
 
