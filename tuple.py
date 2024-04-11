@@ -36,7 +36,7 @@ for i in range(2):
         if stress ==False: 
            lastName = input("You don't have sense can't you see compulsory \nEnter your last name mumu\n").capitalize()
     last.append(stress) 
-z
+
 print(first);print(middle);print(last)
 # student records
 # 1. duro duro duro
