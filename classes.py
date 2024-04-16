@@ -1,10 +1,13 @@
 class car:
     # name = "Tesla"
-    def __init__(self) -> None:
-        self.name = "Tesla"  
+    def __init__(self,name,color,tyres) -> None:
+        self.name = name 
+        self.color = color
+        self.col = tyres
     def move(self,distance):
-        print(f"The {self.name} car is moving hehe as move {distance}km/hr")
+        print(f"The {self.name} car is moving hehe at {distance}km/hr. The color is {self.color} with {self.col} numbers of tyres ")
         
-var = car()
+var = car("Tesla","Red","4")
 # print(var.name)
-var.move(distance=10)
+
+var.move("20")
