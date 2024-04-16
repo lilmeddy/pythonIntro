@@ -8,6 +8,13 @@ class auth:
         self.log()
     def reg(self):
         name = input("Enter your full name: ")
+        new = False
+        while new == False:
+            for i in name.split(" "):
+                if i != "":
+                    new = i
+            if new == False: 
+                name = input("You don't have sense.Enter your name don't stress me: ")
         phoneNumber = input("Enter your phone number: +234 ")
         num = False 
         while num == False:

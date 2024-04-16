@@ -5,7 +5,7 @@ for users in range(2):
     userName =input("Enter your username\n")
     for i in user:
        while i[0] == userName:
-            print("UserName taken")
+           
             userName= input("Enter your user name\n")
     lastName,password = input("Enter your last name\n"),input("Enter your password\n")
     while len(password) < 10 :
