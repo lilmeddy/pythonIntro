@@ -1,4 +1,6 @@
 class car:
-    name = "Tesla"
+    # name = "Tesla"
+    def __init__(self) -> None:
+        self.name = "Tesla"  
 var = car()
 print(var.name)
