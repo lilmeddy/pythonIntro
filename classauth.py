@@ -3,7 +3,7 @@ class auth:
         self.reg()
         self.log()
     def reg(self):
-        
+        name = input("Enter your full name: ")
     # def log(self):
         
 auth()    
