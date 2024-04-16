@@ -4,6 +4,8 @@ class auth:
         self.log()
     def reg(self):
         name = input("Enter your full name: ")
+        phoneNumber = input("Enter your phone number: ")
+        password = input("Enter your password: ")
     # def log(self):
         
 auth()    
