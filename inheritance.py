@@ -12,3 +12,18 @@ class studentchild(student):
 # var = student("mede","ede")
 var = studentchild("mede","ede")
 var.greeting()
+
+class auth:
+    def __init__(self,bank) -> None:
+        self.bank = bank
+        self.user =[]
+    def register(self):
+        name = input("Enter fullname ")
+        age = input("Enter your age ")
+        self.user.append([name,age])
+class firstbank(auth):
+    def __init__(self, bank) -> None:
+        super().__init__(bank) #makes the firstbank have all the attributes of auth so it's important if you want the attribute
+        print(self.user)
+        self.register()
+      
