@@ -7,7 +7,7 @@ class auth:
         self.reg()
         self.log()
     def reg(self):
-        name = input("Enter your full name: ")
+        name = input("Enter your full name : ")
         nam = False
         while nam == False:
             for i in name.split(" "):
