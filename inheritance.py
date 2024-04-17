@@ -26,6 +26,11 @@ class firstbank(auth):
         super().__init__(bank) #makes the firstbank have all the attributes of auth so it's important if you want the attribute
         print(f"Welcome to {bank}")
         self.register()
+        
+        phone = input("Enter phone number +234 ")
+        for i in self.user:
+            if i[0] == self.name:
+                i.append(phone)
         print(self.user)
 firstbank("firstbank")
       
