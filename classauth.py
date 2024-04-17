@@ -8,12 +8,12 @@ class auth:
         self.log()
     def reg(self):
         name = input("Enter your full name: ")
-        new = False
-        while new == False:
+        nam = False
+        while nam == False:
             for i in name.split(" "):
                 if i != "":
-                    new = i
-            if new == False: 
+                    nam = i
+            if nam == False: 
                 name = input("You don't have sense.Enter your name don't stress me: ")
         phoneNumber = input("Enter your phone number: +234 ")
         num = False 
@@ -24,18 +24,16 @@ class auth:
                 if num == False:
                     phoneNumber = input("All nigerians phone number +234 (and should start with 9,8 or 7 and the second value should be 0 or 1) and 10 digits\nEnter your phone number \n+234 ")
         password = input("Enter your password: ")
-        self.list.append([name, num, password])
+        self.list.append([nam, num, password])
     def log(self):
-        username = input("Enter your username: ")
-        for i in self.list :
-            pass
-        while i[0] != username:
+        username = input("Enter your name: ")
+        while self.list[-1][0] != username:
             print("Invalid username");username = input("Enter your full name: ")
         passWord= input("Enter your password: ")
-        while passWord != i[2]:
+        while passWord != self.list[-1][2]:
             passWord= input("Invalid password\nEnter your password: ")
         self.logged.append([username,passWord]) 
-        print(f"The currently logged in user is {i[0]}")
+        print(f"The currently logged in user is {self.list[-1][0]}")
        
 
         
