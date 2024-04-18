@@ -18,15 +18,14 @@ class auth:
         self.bank = bank
         self.user =[]
     def register(self):
-        name = input("Enter fullname ")
+        self.name = input("Enter fullname ")
         age = input("Enter your age ")
-        self.user.append([name,age])
+        self.user.append([self.name,age])
 class firstbank(auth):
     def __init__(self, bank) -> None:
         super().__init__(bank) #makes the firstbank have all the attributes of auth so it's important if you want the attribute
         print(f"Welcome to {bank}")
         self.register()
-        
         phone = input("Enter phone number +234 ")
         for i in self.user:
             if i[0] == self.name:
