@@ -34,6 +34,9 @@
 #         print(self.user)
 # firstbank("firstbank")
     
-mede = ("mede","tayo","timi")
-name = iter(mede)
-print(next(name))
+# nam = ("mede","tayo","timi")
+# name = iter(nam)
+# print(next(name))
+# print(next(name))
+# print(next(name))
+
