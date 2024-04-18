@@ -24,6 +24,7 @@ class auth:
 class firstbank(auth):
     def __init__(self, bank) -> None:
         super().__init__(bank) #makes the firstbank have all the attributes of auth so it's important if you want the attribute
+        auth.__init__(bank) #another way to do it instead of super 
         print(f"Welcome to {bank}")
         self.register()
         phone = input("Enter phone number +234 ")
