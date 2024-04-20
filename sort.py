@@ -19,6 +19,5 @@ for num in numbers:
 
        
 print(sortNum)
-   
        
           
