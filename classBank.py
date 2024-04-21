@@ -5,14 +5,18 @@ class bank:
         self.balance = 5000
         self.phone = []
     def start(self):
-        print("Welcome to our bank\n")
-        print("Enter 1 to register\nEnter 2 to login\nEnter 3 to quit")
-        ans = input("")
-        if ans in ["1", "2", "3"]:
-            if ans == "1":
-                self.register()
-            if ans == "2":
-                self.login()
+        print("Welcome to our bank\nEnter 1 to register\nEnter 2 to login\nEnter 3 to quit\n")
+        try:
+            ans = int(input(""))
+            if ans in ["1", "2", "3"]:
+                if ans == "1":
+                    self.register()
+                if ans == "2":
+                    self.login()
+        except:
+            ans = int(input(""))
+        else:
+            break
     def register(self):
         self.balance +=50000;firstName = input("Enter your first name (compulsory)\n").capitalize();first = False
         while first == False:
