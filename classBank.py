@@ -4,16 +4,16 @@ class bank:
         self.start()
         self.balance = 5000
         self.phone = []
-        self.register()
+        # self.register()
     def start(self):
         print("Welcome to our bank\nEnter 1 to register\nEnter 2 to login\nEnter 3 to quit\n")
         while True:
             try:
                 ans = int(input(""))
-                if ans in ["1", "2", "3"]:
-                    if ans == "1":
+                if ans in [1, 2, 3]:
+                    if ans == 1:
                         self.register()
-                    if ans == "2":
+                    if ans == 2:
                         self.login()
             except:
                 print("Must contain only numbers from 1-3")
@@ -49,9 +49,11 @@ class bank:
                 if num == False:
                     phoneNumber = input("All nigerians phone number +234 (and should start with 9,8 or 7 and the second value should be 0 or 1) and 10 digits\nEnter your phone number \n+234 ")
         self.users.append([first,middleName,last,num])
-        
-bank()          
-         
+    
+    def validatePhoneNumber(self):
+        print("Hello")
+bank()         
+    
         
         
         
